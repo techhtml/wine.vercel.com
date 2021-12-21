@@ -8,7 +8,7 @@ interface BeerContainerProps {
 
 
 export const BeerContainer = ({ name }: BeerContainerProps) => {
-  const { data, error } = useBeerData('ale');
+  const { data, error } = useBeerData(name);
 
   if(error) return <Error />
   if(!data) return <Loading />
@@ -17,7 +17,7 @@ export const BeerContainer = ({ name }: BeerContainerProps) => {
     <main>
       {data.map((beerData: Beer) => {
         return (
-          <BeerCard beerData={beerData} />
+          <BeerCard key={`${name}-beer-data-${beerData.id}`} beerData={beerData} />
         )
       })}
     </main>
