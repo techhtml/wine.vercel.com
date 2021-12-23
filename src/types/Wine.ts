@@ -1,9 +1,10 @@
-import { Rating } from "./Rating";
-
 export interface Wine {
   winery: string,
   wine: string,
-  rating: Rating,
+  rating: {
+    average: string,
+    reviews: string,
+  },
   location: string,
   image: string,
   id: number
