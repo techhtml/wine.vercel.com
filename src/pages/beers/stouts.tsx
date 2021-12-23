@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { BeerContainer } from "../../components/BeerCotaniner";
+import { BeerContainer } from "../../components/BeerCotainer";
 
 const StoutsPage:NextPage = () => {
   const name = 'stouts';
