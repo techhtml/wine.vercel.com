@@ -13,16 +13,18 @@ export const WineContainer = ({ name }: WineContainerProps) => {
   if(!data) return <Loading />
   
   return (
-    <main>
-      {data.map((wineData: Wine) => {
-        return (
-          <WineCard 
-            key={`${name}-wine-list-${wineData.id}`} 
-            wineData={wineData}
-          />
-        )
-      })}
-    </main>
+    <div>
+      <h1>{name} wine</h1>
+      <main>
+        {data.map((wineData: Wine) => {
+          return (
+            <WineCard 
+              key={`${name}-wine-list-${wineData.id}`} 
+              wineData={wineData}
+            />
+          )
+        })}
+      </main>
+    </div>
   )
-
 }
