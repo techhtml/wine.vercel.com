@@ -22,7 +22,7 @@ export const Navigation = () => {
                     <a>{routeObject.LABEL}</a>
                   </Link>
                   <ul>
-                    {routeObject.SUBS.map((subRouteObject: ROUTE) => {
+                    {routeObject.SUBS && routeObject.SUBS.map((subRouteObject: ROUTE) => {
                       return (
                         <li>
                           <Link href={`${routeObject.PATH}${subRouteObject.PATH}`}>
